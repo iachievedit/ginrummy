@@ -196,16 +196,16 @@ while True:
 
   
   if winner:
-#      print(f"Player {player} WINS")
-#      structure = GinRummy().print_hand_structure(players[player])
-#      print(players[player])
-#      print(structure)
-#      print(list(map(lambda c: c.uniqid(), hand_before)), ",", sdd, ",", list(map(lambda c: c.uniqid(), players[player])), ",", GinRummy().eval(players[player]))
-      hand_before = copy.deepcopy(players[player])
-      print(hand_before)
-      print(list(map(lambda c: c.uniqid(), hand_before)), ",", [-1,-1,-1], ",", list(map(lambda c: c.uniqid(), players[player])), ",", GinRummy().eval(players[player]))
+    for i, card in enumerate(players[player]):
+      print("Testing ", card)
+      temp_list = players[player][:i] + players[player][i+1:]
+      if GinRummy().eval(temp_list) == 0:
+        print("Discarded ", card)
+        print(list(map(lambda c: c.uniqid(), players[player])), ",", [-1,-1,card.uniqid()], ",", list(map(lambda c: c.uniqid(), temp_list)), ",", GinRummy().eval(temp_list))
+        exit(0)
 
-      exit(0)
+    exit(0)
+    
   else:
       hand_before = copy.deepcopy(players[player])
       # Pick a card in the hand to discard

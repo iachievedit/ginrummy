@@ -9,4 +9,5 @@ while True:
         print("Inner script returned 0. Stopping!")
         break
     else:
-        print(f"Inner script returned {result.returncode}. Running again...")
+        pass
+        #print(f"Inner script returned {result.returncode}. Running again...")
