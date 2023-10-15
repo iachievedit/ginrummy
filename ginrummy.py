@@ -99,7 +99,7 @@ while True:
 
       seen_draw_discard[player].append(sdd)
       #print(f"Player {player} discards:", random_card.uniqid())
-      print(sdd, list(map(lambda c: c.uniqid(), players[player])), GinRummy().eval(players[player]))
+      print(f"Player {player}", sdd, list(map(lambda c: c.uniqid(), players[player])), GinRummy().eval(players[player]))
   
 
       player = 1 if player == 0 else 0
