@@ -196,8 +196,15 @@ while True:
 
   
   if winner:
-      print(f"Player {player} WINS")
-      print(GinRummy().print_hand_structure(players[player]))
+#      print(f"Player {player} WINS")
+#      structure = GinRummy().print_hand_structure(players[player])
+#      print(players[player])
+#      print(structure)
+#      print(list(map(lambda c: c.uniqid(), hand_before)), ",", sdd, ",", list(map(lambda c: c.uniqid(), players[player])), ",", GinRummy().eval(players[player]))
+      hand_before = copy.deepcopy(players[player])
+      print(hand_before)
+      print(list(map(lambda c: c.uniqid(), hand_before)), ",", [-1,-1,-1], ",", list(map(lambda c: c.uniqid(), players[player])), ",", GinRummy().eval(players[player]))
+
       exit(0)
   else:
       hand_before = copy.deepcopy(players[player])
