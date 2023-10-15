@@ -4,7 +4,7 @@
 import subprocess
 
 while True:
-    result = subprocess.run(['python', 'ginrummy.py'])
+    result = subprocess.run(['python', 'ginrummy.py', '--pretty-print'])
     if result.returncode == 0:
         print("Inner script returned 0. Stopping!")
         break

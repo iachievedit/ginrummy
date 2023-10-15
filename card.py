@@ -1,7 +1,7 @@
 import random
-
+        
 class Card:
-    suits = ['C', 'D', 'H', 'S']
+    suits = ['♣️', '♦️', '♥️', '♠️']
     values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
     value_map = {value: index + 1 for index, value in enumerate(values)}
 
@@ -13,7 +13,7 @@ class Card:
         return self.value_map[self.value] < other.value_map[other.value]
     
     def __repr__(self):
-        return f"{self.value} of {self.suit} - {self.uniqid()}"
+        return f"{self.value}{self.suit}" # - {self.uniqid()}"
     
     def uniqid(self):
         suit_index = Card.suits.index(self.suit)
@@ -45,5 +45,3 @@ class Deck:
             return self.cards.pop()
         else:
             return None
-
-
