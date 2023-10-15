@@ -54,3 +54,31 @@ Player 1 [41, 41, 5] [33, 0, 42, 13, 9, 10, 43, 39, 6, 41] 7
 
 The scoring function for each hand is based upon the number of cards
 that cannot be put in a set.  10 is the worst possible, meaning no card is in a set.  0 is the best possible, meaning all cards are in a hand (and you've won).
+
+## Running the play.py script
+
+This is a work in progress, but the play.py scripts goal will be to
+generate human-readable output, as well as a file that contains
+vectors for the "before hand", the action, the "after hand", and the
+score.  
+
+
+```
+./play.py 
+...
+5♥️ ,6♥️ ,9♥️ ,10♥️ ,J♥️ ,Q♥️ ,7♥️ ,7♠️ ,8♣️ ,8♦️ ,A♠️   J♦️ ,J♥️ ,A♠️   5♥️ ,6♥️ ,9♥️ ,10♥️ ,J♥️ ,Q♥️ ,7♥️ ,7♠️ ,8♣️ ,8♦️   3
+3♥️ ,3♣️ ,4♠️ ,4♣️ ,2♠️ ,Q♦️ ,10♠️ ,6♦️ ,9♦️ ,8♠️ ,K♣️   A♠️ ,K♣️ ,8♠️   3♥️ ,3♣️ ,4♠️ ,4♣️ ,2♠️ ,Q♦️ ,10♠️ ,6♦️ ,9♦️ ,K♣️   10
+Testing  7♥️
+Testing  Q♥️
+Testing  6♥️
+Testing  8♣️
+Testing  10♥️
+Testing  7♠️
+Discarded  7♠️
+[32, 37, 31, 7, 35, 45, 34, 20, 30, 36, 46] , [-1, -1, 45] , [32, 37, 31, 7, 35, 34, 20, 30, 36, 46] , 0
+Inner script returned 0. Stopping!
+```
+
+# ChatGPT
+
+This project is another exercise is using ChatGPT to help fill in the blanks or generate code for the mundane (score the hand, pretty print things, etc.)
