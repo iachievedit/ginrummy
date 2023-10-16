@@ -202,6 +202,7 @@ while True:
       if GinRummy().eval(temp_list) == 0:
         print("Discarded ", card)
         print(list(map(lambda c: c.uniqid(), players[player])), ",", [-1,-1,card.uniqid()], ",", list(map(lambda c: c.uniqid(), temp_list)), ",", GinRummy().eval(temp_list))
+        print(' ,'.join(map(str,players[player])), ",", card, ",", ' ,'.join(map(str,temp_list)))
         exit(0)
 
     exit(0)
